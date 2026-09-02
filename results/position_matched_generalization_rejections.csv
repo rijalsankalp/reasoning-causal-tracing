@@ -1,0 +1,10 @@
+example,reason
+Kate>Alice>David,"behavioral contrast failed: clean=-1.1047, corrupt=-7.3021"
+Jack>Alice>David,"behavioral contrast failed: clean=-0.0001, corrupt=-6.0104"
+Bob>Jack>David,"behavioral contrast failed: clean=-0.4642, corrupt=-5.4096"
+Jack>David>Bob,"behavioral contrast failed: clean=-1.2995, corrupt=-6.8400"
+Emma>Frank>Alice,"behavioral contrast failed: clean=-1.1396, corrupt=-6.2145"
+Kate>David>Charlie,"behavioral contrast failed: clean=-1.2573, corrupt=-7.2262"
+Jack>Irene>Bob,"behavioral contrast failed: clean=-3.2794, corrupt=-9.8517"
+Charlie>Frank>Henry,"behavioral contrast failed: clean=-3.9742, corrupt=-10.4340"
+Frank>Alice>Grace,"behavioral contrast failed: clean=-0.2480, corrupt=-5.6138"

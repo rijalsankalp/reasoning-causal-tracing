@@ -12,6 +12,10 @@ Small mechanistic-interpretability experiments on whether Qwen3-0.6B's verbalize
 
 The strongest controlled result holds the prompt and teacher-forced continuation text fixed, changes only a layer-3 prompt state during prefill, and patches the residual stream at the same probe position. The clean and corrupted-state baselines favor opposite relation tokens; causal separation becomes clear in later layers. This result concerns an internal prompt-state intervention and does not establish that verbalized CoT is necessary.
 
+The position-matched result was repeated across 21 candidate name permutations. **12 / 21 qualified** under the fixed behavioral and probe criteria; all nine rejections failed the required clean behavioral contrast. Across the qualified examples, bidirectional source-state transfer became consistent in later layers, reached approximately 0.96 by layer 25, and was complete immediately before the readout at layer 27.
+
+![Position-matched generalization](figures/position-matched-generalization.png)
+
 ## Run
 
 From the repository root:
@@ -26,11 +30,14 @@ The default is the position-matched relation probe. Experiments can also be run 
 ```bash
 python main.py --experiment relation-probe
 python main.py --experiment localization
+python main.py --experiment generalization
 python src/position_matched_relation_probe.py
 python src/causal_localization.py
+python src/position_matched_generalization.py
 ```
 
 The first run downloads `Qwen/Qwen3-0.6B` and requires enough memory for model activations.
+The generalization run is substantially more expensive than the default single-example experiment.
 
 ## Reproducibility
 
